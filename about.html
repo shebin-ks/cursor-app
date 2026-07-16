@@ -18,6 +18,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 24px;
     }
 
     .card {
@@ -26,13 +27,20 @@
       padding: 48px 56px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
       text-align: center;
-      max-width: 480px;
+      max-width: 620px;
+      width: 100%;
     }
 
     h1 {
       color: #2575fc;
       font-size: 2.2rem;
       margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #888;
+      font-size: 1rem;
+      margin-bottom: 24px;
     }
 
     p {
@@ -52,9 +60,72 @@
       font-weight: 600;
     }
 
+    .divider {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 32px 0;
+    }
+
+    .section-title {
+      color: #222;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .features {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #444;
+      font-size: 0.98rem;
+      line-height: 1.4;
+    }
+
+    .features li .icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #eef2ff;
+      color: #2575fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+
+    .stack span {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #f4f4f6;
+      color: #555;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
     .back-link {
       display: inline-block;
-      margin-top: 24px;
+      margin-top: 32px;
       color: #2575fc;
       text-decoration: none;
       font-weight: 600;
@@ -63,14 +134,42 @@
     .back-link:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 480px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>About This Project</h1>
-    <p>Cursor App is a simple static site built to demonstrate a basic multi-page HTML setup.</p>
+    <p class="subtitle">A small static site, built to keep things simple.</p>
+
+    <p>
+      Cursor App is a lightweight, multi-page static site with a clean, modern
+      look. It has no build step and no dependencies &mdash; just open the HTML
+      files in a browser and go.
+    </p>
     <span class="badge">Built with Cursor</span>
-    <br />
+
+    <hr class="divider" />
+
+    <div class="section-title">What's inside</div>
+    <ul class="features">
+      <li><span class="icon">&#10003;</span> Responsive, gradient-based design</li>
+      <li><span class="icon">&#10003;</span> Simple multi-page navigation</li>
+      <li><span class="icon">&#10003;</span> Zero dependencies or build tools</li>
+      <li><span class="icon">&#10003;</span> Easy to extend with new pages</li>
+    </ul>
+
+    <div class="stack">
+      <span>HTML5</span>
+      <span>CSS3</span>
+      <span>No frameworks</span>
+    </div>
+
     <a class="back-link" href="index.html">&larr; Back to Home</a>
   </div>
 </body>
