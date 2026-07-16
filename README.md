@@ -4,8 +4,9 @@ A simple static HTML page for the cursor-app project.
 
 ## Contents
 
-- `index.html` — a standalone HTML page with basic styling.
+- `index.html` — the home page with basic styling.
+- `about.html` — an about page linked from the home page.
 
 ## Usage
 
-Open `index.html` in any web browser to view the page.
+Open `index.html` in any web browser to view the page, then use the "Learn more" link to navigate to the about page.
